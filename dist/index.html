@@ -6,5 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather</title>
   <script defer src="main.js"></script></head>
-  <body></body>
+  <body>
+    <div class="container" data-container>
+      <div class="search">
+        <form action="get" data-form>
+          <input
+            type="text"
+            name="city"
+            id="city"
+            placeholder="Enter city name..."
+            data-input
+          />
+        </form>
+      </div>
+      <div class="card" data-card>
+        <div class="city-details" data-city-details>
+          <span class="city-name" data-city-name></span>
+          <span class="country" data-country></span>
+        </div>
+        <div class="forecast" data-forecast>
+          <p class="description" data-description></p>
+          <h2 class="temp" data-temp></h2>
+          <p class="feels-like">Feels like: <span data-feels-like></span></p>
+        </div>
+        <div class="other-details" data-other-details>
+          <div class="humidity">
+            <p>Humidity</p>
+            <p data-humidity></p>
+          </div>
+          <div class="pressure">
+            <p>Pressure</p>
+            <p data-pressure></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
