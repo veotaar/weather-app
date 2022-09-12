@@ -1,3 +1,5 @@
+@import "open-props/colors-hsl";
+
 body {
   font-family: var(--font-sans);
   background-color: var(--surface-1);
@@ -6,11 +8,51 @@ body {
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-3);
   max-width: var(--size-15);
   margin-inline: auto;
   color: inherit;
 }
 
 input {
-  outline: 2px solid var(--gray-6);
+  border: 2px solid var(--gray-6);
+  padding: var(--size-2);
+  font-size: var(--font-size-3);
+  width: 100%;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-7);
+  text-align: center;
+  padding: var(--size-6);
+  border: 2px solid var(--gray-6);
+  border-radius: var(--radius-2);
+  background-color: var(--surface-2);
+}
+
+.city > p {
+  font-size: var(--font-size-4);
+}
+
+.other-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  position: absolute;
+  top: var(--size-2);
+  right: var(--size-2);
+  border: 1px solid var(--gray-6);
+  border-radius: var(--radius-2);
+  background-color: hsl(var(--gray-9-hsl) / 0%);
+}
+
+button:hover {
+  background-color: hsl(var(--gray-9-hsl) / 20%);
 }
